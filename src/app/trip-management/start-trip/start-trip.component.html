@@ -9,7 +9,7 @@
             <br>
             <br>
             <select id="id" name="id" [(ngModel)]="getTrucks" class="form-select" aria-label="Default select example" ngModel>
-                <option *ngFor="let truck of trucks">{{truck.numberPlate}}</option>
+                <option *ngFor="let truck of trucks" [value]="truck.id">{{truck.numberPlate}}</option>
             </select>
             <br><br>
             <input id="startKilometers" name="startKilometers" class="form-control" type="text" placeholder="Enter kilimeters" aria-label="default input example" ngModel>

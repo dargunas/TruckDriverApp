@@ -8,6 +8,18 @@ export class Truck {
   constructor(
     public id: number,
     public numberPlate: string
+    ){
+ }
+}
+
+export class Fuel {
+  constructor(
+    public id: number,
+    public adblue: number,
+    public dieselFuel: number,
+    public endKilometers: number,
+    public startKilometers: number,
+    public truckId: number
   ){
  }
 }
@@ -23,6 +35,7 @@ export class Truck {
 export class StartTripComponent implements OnInit {
 
   trucks: Truck[] = [];
+  fuel1: Fuel[] = [];
   
   constructor(private httpClient: HttpClient ) { }
 
@@ -38,9 +51,20 @@ getTrucks(){
     });
 }
 
-addNewTrip(user: {id: number, kilometers: string, date: string}){
-  console.log(user);
-this.httpClient.post('http://localhost:8080/driver/postNew', user).subscribe((res)=> {
+addNewTrip(fuel: {date: string, startKilometers: number, truckId: number}){
+  console.log(fuel);
+  var fuel2: Object[] = [];
+  this.httpClient.post('http://localhost:8080/fuel/postNew', fuel).subscribe((res)=> {
+  console.log(res), fuel2.push(res), console.log(fuel2);
+    }); 
+}
+
+
+
+putTruckFuel(id: number, truck: {id: number}){
+  console.log(truck);
+  const endpointUrl = 'http://localhost:8080/truck/putFuel/'+ id;
+  this.httpClient.put<any>(endpointUrl, truck).subscribe((res)=>  {
   console.log(res);
     });
 }
