@@ -1,0 +1,82 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300);
+@import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(src\assets\images\truck2.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.form{
+    width: 30%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box h1{
+    font-size: 62px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: gold;
+ }
+
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 16px;
+    background: black; 
+    position: relative;
+    cursor: pointer;
+}
+
+.hero-btn:hover{
+    border: 1px solid grey;
+    background: grey;
+    transition: 1s;
+}
+
+@media(min-width: 50px) and (max-width: 700px){
+    .text-box h1{
+        font-size: 18px;
+    }
+    .form{
+        width: 70%;
+    }
+    .date-picker h2{
+        font-size: 1.6em; 
+        font-weight: 200;  
+    }    
+    .date-picker h4 {
+        font-size: 0.8em;
+    }  
+    .date-picker span.fa {
+        font-size: 1.5em;
+    } 
+    
+}
+
+
+/* @media (min-width: 768px) and (max-width: 1010px) {
+    .date-picker h2{
+        font-size: 1.5em; 
+        font-weight: 400;  
+    }    
+    .date-picker h4 {
+        font-size: 1.1em;
+    }  
+    .date-picker span.fa {
+        font-size: 3em;
+    } 
+} */

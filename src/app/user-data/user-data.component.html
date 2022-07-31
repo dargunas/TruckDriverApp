@@ -1,0 +1,15 @@
+<section class="header">
+    <app-nav-bar></app-nav-bar>
+
+    <form class="form" #userForm="ngForm" (ngSubmit)="addNewUser(userForm.value)">
+        <div class="mb-3">
+            <label>Your Full Name</label>
+            <input class="form-control" type="text" name="name" placeholder="Jonas Jonaitis" aria-label="default input example" ngModel><br>
+            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+            <input type="email" class="form-control" name="email" id="exampleFormControlInput1" placeholder="name@example.com" ngModel><br>
+            <label>Your Password</label>
+            <input class="form-control" type="text" name="password" placeholder="Password" aria-label="default input example" ngModel><br>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</section>

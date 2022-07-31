@@ -1,0 +1,23 @@
+<section class="header">
+    <app-nav-bar></app-nav-bar>
+    <form class="form" #userForm="ngForm" (ngSubmit)="addNewTrip(userForm.value)">
+    <br><br>
+    
+        <div class="text box">
+
+            <input id="date" name="date" class="form-control" type="date" aria-label="default input example" ngModel>
+            <br>
+            <br>
+            <select id="id" name="id" [(ngModel)]="getTrucks" class="form-select" aria-label="Default select example" ngModel>
+                <option *ngFor="let truck of trucks">{{truck.numberPlate}}</option>
+            </select>
+            <br><br>
+            <input id="startKilometers" name="startKilometers" class="form-control" type="text" placeholder="Enter kilimeters" aria-label="default input example" ngModel>
+            <br><br>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+</section>
+
+
+

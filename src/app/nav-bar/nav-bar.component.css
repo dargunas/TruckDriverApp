@@ -1,0 +1,11 @@
+.navbar ul li a{
+    color: white;
+}
+
+.navbar-brand {
+    color: white;
+}
+
+@media (max-width:700px){
+    
+}
